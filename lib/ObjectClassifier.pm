@@ -21,4 +21,8 @@ sub length {
     scalar @{$self->{objects}};
 }
 
+sub classify {
+    'number';
+}
+
 1;

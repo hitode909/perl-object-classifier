@@ -18,3 +18,9 @@ sub add : Tests {
     $oc->add(1);
     is $oc->length, 1;
 }
+
+sub classify : Tests {
+    my $oc = ObjectClassifier->new;
+    $oc->add(3);
+    is $oc->classify, 'number';
+}
