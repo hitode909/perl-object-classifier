@@ -1,0 +1,858 @@
+{
+   "modules" : {
+      "ExtUtils::MakeMaker" : {
+         "dist" : "ExtUtils-MakeMaker-6.84",
+         "mymeta" : {
+            "abstract" : "Create a module Makefile",
+            "author" : [
+               "Michael G Schwern <schwern@pobox.com>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "ExtUtils::MakeMaker version 6.84, CPAN::Meta::Converter version 2.120351, CPAN::Meta::Converter version 2.131560",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "ExtUtils-MakeMaker",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "inc",
+                  "bundled",
+                  "my"
+               ],
+               "package" : [
+                  "DynaLoader",
+                  "in"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "Data::Dumper" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {}
+               },
+               "runtime" : {
+                  "requires" : {
+                     "DirHandle" : "0",
+                     "File::Basename" : "0",
+                     "File::Spec" : "0.8",
+                     "Pod::Man" : "0",
+                     "perl" : "5.006"
+                  }
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "bugtracker" : {
+                  "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=ExtUtils-MakeMaker"
+               },
+               "homepage" : "https://metacpan.org/release/ExtUtils-MakeMaker",
+               "license" : [
+                  "http://dev.perl.org/licenses/"
+               ],
+               "repository" : {
+                  "url" : "http://github.com/Perl-Toolchain-Gang/ExtUtils-MakeMaker"
+               },
+               "x_MailingList" : "makemaker@perl.org"
+            },
+            "version" : "6.84"
+         },
+         "name" : "ExtUtils::MakeMaker",
+         "pathname" : "B/BI/BINGOS/ExtUtils-MakeMaker-6.84.tar.gz",
+         "provides" : {
+            "DynaLoader" : {
+               "file" : "lib/ExtUtils/Mkbootstrap.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::Command::MM" : {
+               "file" : "lib/ExtUtils/Command/MM.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::Liblist" : {
+               "file" : "lib/ExtUtils/Liblist.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::Liblist::Kid" : {
+               "file" : "lib/ExtUtils/Liblist/Kid.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM" : {
+               "file" : "lib/ExtUtils/MM.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_AIX" : {
+               "file" : "lib/ExtUtils/MM_AIX.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_Any" : {
+               "file" : "lib/ExtUtils/MM_Any.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_BeOS" : {
+               "file" : "lib/ExtUtils/MM_BeOS.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_Cygwin" : {
+               "file" : "lib/ExtUtils/MM_Cygwin.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_DOS" : {
+               "file" : "lib/ExtUtils/MM_DOS.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_Darwin" : {
+               "file" : "lib/ExtUtils/MM_Darwin.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_MacOS" : {
+               "file" : "lib/ExtUtils/MM_MacOS.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_NW5" : {
+               "file" : "lib/ExtUtils/MM_NW5.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_OS2" : {
+               "file" : "lib/ExtUtils/MM_OS2.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_QNX" : {
+               "file" : "lib/ExtUtils/MM_QNX.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_UWIN" : {
+               "file" : "lib/ExtUtils/MM_UWIN.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_Unix" : {
+               "file" : "lib/ExtUtils/MM_Unix.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_VMS" : {
+               "file" : "lib/ExtUtils/MM_VMS.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_VOS" : {
+               "file" : "lib/ExtUtils/MM_VOS.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_Win32" : {
+               "file" : "lib/ExtUtils/MM_Win32.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MM_Win95" : {
+               "file" : "lib/ExtUtils/MM_Win95.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MY" : {
+               "file" : "lib/ExtUtils/MY.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MakeMaker" : {
+               "file" : "lib/ExtUtils/MakeMaker.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MakeMaker::Config" : {
+               "file" : "lib/ExtUtils/MakeMaker/Config.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::MakeMaker::_version" : {
+               "file" : "lib/ExtUtils/MM_Unix.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::Mkbootstrap" : {
+               "file" : "lib/ExtUtils/Mkbootstrap.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::Mksymlists" : {
+               "file" : "lib/ExtUtils/Mksymlists.pm",
+               "version" : "6.84"
+            },
+            "ExtUtils::testlib" : {
+               "file" : "lib/ExtUtils/testlib.pm",
+               "version" : "6.84"
+            },
+            "MM" : {
+               "file" : "lib/ExtUtils/MM.pm",
+               "version" : "6.84"
+            },
+            "MY" : {
+               "file" : "lib/ExtUtils/MakeMaker.pm",
+               "version" : "6.84"
+            },
+            "in" : {
+               "file" : "lib/ExtUtils/Command/MM.pm",
+               "version" : "6.84"
+            }
+         },
+         "target" : "ExtUtils::MakeMaker",
+         "version" : "6.84"
+      },
+      "MRO::Compat" : {
+         "dist" : "MRO-Compat-0.12",
+         "mymeta" : {
+            "abstract" : "mro::* interface compatibility for Perls < 5.9.5",
+            "author" : [
+               "Brandon L. Black, <blblack@gmail.com>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Module::Install version 1.06, CPAN::Meta::Converter version 2.131560",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "MRO-Compat",
+            "no_index" : {
+               "directory" : [
+                  "inc",
+                  "t"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "6.59",
+                     "Test::More" : "0.47"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "6.59"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "perl" : "5.006"
+                  }
+               }
+            },
+            "provides" : {
+               "MRO::Compat" : {
+                  "file" : "lib/MRO/Compat.pm",
+                  "version" : "0.12"
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "license" : [
+                  "http://dev.perl.org/licenses/"
+               ]
+            },
+            "version" : "0.12",
+            "x_module_name" : "MRO::Compat"
+         },
+         "name" : "MRO::Compat",
+         "pathname" : "B/BO/BOBTFISH/MRO-Compat-0.12.tar.gz",
+         "provides" : {
+            "MRO::Compat" : {
+               "file" : "lib/MRO/Compat.pm",
+               "version" : "0.12"
+            }
+         },
+         "target" : "MRO::Compat",
+         "version" : "0.12"
+      },
+      "Module::Build" : {
+         "dist" : "Module-Build-0.4203",
+         "mymeta" : {
+            "abstract" : "Build and install Perl modules",
+            "author" : [
+               "Ken Williams <kwilliams@cpan.org>",
+               "Module-Build mailing list at <module-build@perl.org>."
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Module::Build version 0.4203, CPAN::Meta::Converter version 2.131560",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Module-Build",
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "CPAN::Meta::YAML" : "0.003",
+                     "File::Temp" : "0.15",
+                     "Parse::CPAN::Meta" : "1.4401",
+                     "Test::Harness" : "3.16",
+                     "Test::More" : "0.49"
+                  }
+               },
+               "runtime" : {
+                  "recommends" : {
+                     "ExtUtils::Install" : "0.3",
+                     "ExtUtils::Manifest" : "1.54"
+                  },
+                  "requires" : {
+                     "CPAN::Meta" : "2.110420",
+                     "Cwd" : "0",
+                     "Data::Dumper" : "0",
+                     "ExtUtils::CBuilder" : "0.27",
+                     "ExtUtils::Install" : "0",
+                     "ExtUtils::Manifest" : "0",
+                     "ExtUtils::Mkbootstrap" : "0",
+                     "ExtUtils::ParseXS" : "2.21",
+                     "File::Basename" : "0",
+                     "File::Compare" : "0",
+                     "File::Copy" : "0",
+                     "File::Find" : "0",
+                     "File::Path" : "0",
+                     "File::Spec" : "0.82",
+                     "Getopt::Long" : "0",
+                     "Module::Metadata" : "1.000002",
+                     "Perl::OSType" : "1",
+                     "Pod::Man" : "2.17",
+                     "Test::Harness" : "0",
+                     "Text::Abbrev" : "0",
+                     "Text::ParseWords" : "0",
+                     "perl" : "5.006001",
+                     "version" : "0.87"
+                  }
+               }
+            },
+            "provides" : {
+               "Module::Build" : {
+                  "file" : "lib/Module/Build.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Base" : {
+                  "file" : "lib/Module/Build/Base.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Compat" : {
+                  "file" : "lib/Module/Build/Compat.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Config" : {
+                  "file" : "lib/Module/Build/Config.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Cookbook" : {
+                  "file" : "lib/Module/Build/Cookbook.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Dumper" : {
+                  "file" : "lib/Module/Build/Dumper.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::ModuleInfo" : {
+                  "file" : "lib/Module/Build/ModuleInfo.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Notes" : {
+                  "file" : "lib/Module/Build/Notes.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::PPMMaker" : {
+                  "file" : "lib/Module/Build/PPMMaker.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::Default" : {
+                  "file" : "lib/Module/Build/Platform/Default.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::MacOS" : {
+                  "file" : "lib/Module/Build/Platform/MacOS.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::Unix" : {
+                  "file" : "lib/Module/Build/Platform/Unix.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::VMS" : {
+                  "file" : "lib/Module/Build/Platform/VMS.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::VOS" : {
+                  "file" : "lib/Module/Build/Platform/VOS.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::Windows" : {
+                  "file" : "lib/Module/Build/Platform/Windows.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::aix" : {
+                  "file" : "lib/Module/Build/Platform/aix.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::cygwin" : {
+                  "file" : "lib/Module/Build/Platform/cygwin.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::darwin" : {
+                  "file" : "lib/Module/Build/Platform/darwin.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Platform::os2" : {
+                  "file" : "lib/Module/Build/Platform/os2.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::PodParser" : {
+                  "file" : "lib/Module/Build/PodParser.pm",
+                  "version" : "0.4203"
+               },
+               "Module::Build::Version" : {
+                  "file" : "lib/Module/Build/Version.pm",
+                  "version" : "0.87"
+               },
+               "Module::Build::YAML" : {
+                  "file" : "lib/Module/Build/YAML.pm",
+                  "version" : "1.41"
+               },
+               "inc::latest" : {
+                  "file" : "lib/inc/latest.pm",
+                  "version" : "0.4203"
+               },
+               "inc::latest::private" : {
+                  "file" : "lib/inc/latest/private.pm",
+                  "version" : "0.4203"
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "license" : [
+                  "http://dev.perl.org/licenses/"
+               ],
+               "repository" : {
+                  "url" : "https://github.com/Perl-Toolchain-Gang/Module-Build"
+               },
+               "x_mailingList" : "mailto:module-build@perl.org"
+            },
+            "version" : "0.4203"
+         },
+         "name" : "Module::Build",
+         "pathname" : "L/LE/LEONT/Module-Build-0.4203.tar.gz",
+         "provides" : {
+            "Module::Build" : {
+               "file" : "lib/Module/Build.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Base" : {
+               "file" : "lib/Module/Build/Base.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Compat" : {
+               "file" : "lib/Module/Build/Compat.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Config" : {
+               "file" : "lib/Module/Build/Config.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Cookbook" : {
+               "file" : "lib/Module/Build/Cookbook.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Dumper" : {
+               "file" : "lib/Module/Build/Dumper.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::ModuleInfo" : {
+               "file" : "lib/Module/Build/ModuleInfo.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Notes" : {
+               "file" : "lib/Module/Build/Notes.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::PPMMaker" : {
+               "file" : "lib/Module/Build/PPMMaker.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::Default" : {
+               "file" : "lib/Module/Build/Platform/Default.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::MacOS" : {
+               "file" : "lib/Module/Build/Platform/MacOS.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::Unix" : {
+               "file" : "lib/Module/Build/Platform/Unix.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::VMS" : {
+               "file" : "lib/Module/Build/Platform/VMS.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::VOS" : {
+               "file" : "lib/Module/Build/Platform/VOS.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::Windows" : {
+               "file" : "lib/Module/Build/Platform/Windows.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::aix" : {
+               "file" : "lib/Module/Build/Platform/aix.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::cygwin" : {
+               "file" : "lib/Module/Build/Platform/cygwin.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::darwin" : {
+               "file" : "lib/Module/Build/Platform/darwin.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Platform::os2" : {
+               "file" : "lib/Module/Build/Platform/os2.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::PodParser" : {
+               "file" : "lib/Module/Build/PodParser.pm",
+               "version" : "0.4203"
+            },
+            "Module::Build::Version" : {
+               "file" : "lib/Module/Build/Version.pm",
+               "version" : "0.87"
+            },
+            "Module::Build::YAML" : {
+               "file" : "lib/Module/Build/YAML.pm",
+               "version" : "1.41"
+            },
+            "inc::latest" : {
+               "file" : "lib/inc/latest.pm",
+               "version" : "0.4203"
+            },
+            "inc::latest::private" : {
+               "file" : "lib/inc/latest/private.pm",
+               "version" : "0.4203"
+            }
+         },
+         "target" : "Module::Build",
+         "version" : "0.4203"
+      },
+      "Path::Class" : {
+         "dist" : "Path-Class-0.33",
+         "mymeta" : {
+            "abstract" : "Cross-platform path specification manipulation",
+            "author" : [
+               "Ken Williams <kwilliams@cpan.org>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Module::Build version 0.4203, CPAN::Meta::Converter version 2.131560",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Path-Class",
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "Module::Build" : "0.3601"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "6.30",
+                     "Module::Build" : "0.3601"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "Carp" : "0",
+                     "Cwd" : "0",
+                     "Exporter" : "0",
+                     "File::Copy" : "0",
+                     "File::Path" : "0",
+                     "File::Spec" : "3.26",
+                     "File::Temp" : "0",
+                     "File::stat" : "0",
+                     "IO::Dir" : "0",
+                     "IO::File" : "0",
+                     "Perl::OSType" : "0",
+                     "Scalar::Util" : "0",
+                     "overload" : "0",
+                     "parent" : "0",
+                     "strict" : "0"
+                  }
+               },
+               "test" : {
+                  "requires" : {
+                     "Test" : "0",
+                     "Test::More" : "0",
+                     "warnings" : "0"
+                  }
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "bugtracker" : {
+                  "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Path-Class"
+               },
+               "repository" : {
+                  "type" : "git",
+                  "url" : "git://github.com/kenahoo/Path-Class.git"
+               }
+            },
+            "version" : "0.33"
+         },
+         "name" : "Path::Class",
+         "pathname" : "K/KW/KWILLIAMS/Path-Class-0.33.tar.gz",
+         "provides" : {
+            "Path::Class" : {
+               "file" : "lib/Path/Class.pm",
+               "version" : "0.33"
+            },
+            "Path::Class::Dir" : {
+               "file" : "lib/Path/Class/Dir.pm",
+               "version" : "0.33"
+            },
+            "Path::Class::Entity" : {
+               "file" : "lib/Path/Class/Entity.pm",
+               "version" : "0.33"
+            },
+            "Path::Class::File" : {
+               "file" : "lib/Path/Class/File.pm",
+               "version" : "0.33"
+            }
+         },
+         "target" : "Path::Class",
+         "version" : "0.33"
+      },
+      "Sub::Uplevel" : {
+         "dist" : "Sub-Uplevel-0.24",
+         "mymeta" : {
+            "abstract" : "apparently run a function in a higher stack frame",
+            "author" : [
+               "Michael Schwern <mschwern@cpan.org>",
+               "David Golden <dagolden@cpan.org>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Dist::Zilla version 4.300005, CPAN::Meta::Converter version 2.112621, CPAN::Meta::Converter version 2.131560",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Sub-Uplevel",
+            "no_index" : {
+               "directory" : [
+                  "t",
+                  "xt",
+                  "examples",
+                  "corpus"
+               ],
+               "package" : [
+                  "DB"
+               ]
+            },
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "Exporter" : "0",
+                     "File::Find" : "0",
+                     "File::Temp" : "0",
+                     "Test::More" : "0"
+                  }
+               },
+               "configure" : {
+                  "requires" : {
+                     "ExtUtils::MakeMaker" : "6.30"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "Carp" : "0",
+                     "constant" : "0",
+                     "strict" : "0",
+                     "warnings" : "0"
+                  }
+               },
+               "test" : {
+                  "requires" : {
+                     "Exporter" : "0",
+                     "File::Find" : "0",
+                     "File::Temp" : "0",
+                     "Test::More" : "0"
+                  }
+               }
+            },
+            "provides" : {
+               "Sub::Uplevel" : {
+                  "file" : "lib/Sub/Uplevel.pm",
+                  "version" : "0.24"
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "bugtracker" : {
+                  "mailto" : "bug-sub-uplevel at rt.cpan.org",
+                  "web" : "http://rt.cpan.org/Public/Dist/Display.html?Name=Sub-Uplevel"
+               },
+               "homepage" : "https://github.com/dagolden/sub-uplevel",
+               "repository" : {
+                  "type" : "git",
+                  "url" : "https://github.com/dagolden/sub-uplevel.git",
+                  "web" : "https://github.com/dagolden/sub-uplevel"
+               }
+            },
+            "version" : "0.24"
+         },
+         "name" : "Sub::Uplevel",
+         "pathname" : "D/DA/DAGOLDEN/Sub-Uplevel-0.24.tar.gz",
+         "provides" : {
+            "Sub::Uplevel" : {
+               "file" : "lib/Sub/Uplevel.pm",
+               "version" : "0.24"
+            }
+         },
+         "target" : "Sub::Uplevel",
+         "version" : "0.24"
+      },
+      "Test::Class" : {
+         "dist" : "Test-Class-0.41",
+         "mymeta" : {
+            "abstract" : "Easily create test classes in an xUnit/JUnit style",
+            "author" : [
+               "Adrian Howard <adrianh@quietstars.com>, Curtis \"Ovid\" Poe, <ovid at cpan.org>, Mark Morgan <makk384@gmail.com>."
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Module::Build version 0.4203, CPAN::Meta::Converter version 2.131560",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Test-Class",
+            "prereqs" : {
+               "build" : {
+                  "requires" : {
+                     "IO::File" : "1.09",
+                     "Test::Exception" : "0.25"
+                  }
+               },
+               "runtime" : {
+                  "requires" : {
+                     "Attribute::Handlers" : "0.77",
+                     "MRO::Compat" : "0.11",
+                     "Storable" : "2.04",
+                     "Test::Builder" : "0.78",
+                     "Test::Builder::Tester" : "1.02",
+                     "Test::More" : "0.78",
+                     "Test::Simple" : "0.78",
+                     "perl" : "5.008001"
+                  }
+               }
+            },
+            "provides" : {
+               "Test::Class" : {
+                  "file" : "lib/Test/Class.pm",
+                  "version" : "0.41"
+               },
+               "Test::Class::Load" : {
+                  "file" : "lib/Test/Class/Load.pm",
+                  "version" : "0.41"
+               },
+               "Test::Class::MethodInfo" : {
+                  "file" : "lib/Test/Class/MethodInfo.pm",
+                  "version" : "0.41"
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "license" : [
+                  "http://dev.perl.org/licenses/"
+               ],
+               "repository" : {
+                  "url" : "http://github.com/adrianh/test-class/"
+               }
+            },
+            "version" : "0.41"
+         },
+         "name" : "Test::Class",
+         "pathname" : "R/RJ/RJBS/Test-Class-0.41.tar.gz",
+         "provides" : {
+            "Test::Class" : {
+               "file" : "lib/Test/Class.pm",
+               "version" : "0.41"
+            },
+            "Test::Class::Load" : {
+               "file" : "lib/Test/Class/Load.pm",
+               "version" : "0.41"
+            },
+            "Test::Class::MethodInfo" : {
+               "file" : "lib/Test/Class/MethodInfo.pm",
+               "version" : "0.41"
+            }
+         },
+         "target" : "Test::Class",
+         "version" : "0.41"
+      },
+      "Test::Exception" : {
+         "dist" : "Test-Exception-0.32",
+         "mymeta" : {
+            "abstract" : "Test exception based code",
+            "author" : [
+               "Adrian Howard <adrianh@quietstars.com>"
+            ],
+            "dynamic_config" : 0,
+            "generated_by" : "Module::Build version 0.4203, CPAN::Meta::Converter version 2.131560",
+            "license" : [
+               "perl_5"
+            ],
+            "meta-spec" : {
+               "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+               "version" : "2"
+            },
+            "name" : "Test-Exception",
+            "prereqs" : {
+               "runtime" : {
+                  "requires" : {
+                     "Sub::Uplevel" : "0.18",
+                     "Test::Builder" : "0.7",
+                     "Test::Builder::Tester" : "1.07",
+                     "Test::Harness" : "2.03",
+                     "Test::More" : "0.7",
+                     "Test::Simple" : "0.7"
+                  }
+               }
+            },
+            "provides" : {
+               "Test::Exception" : {
+                  "file" : "lib/Test/Exception.pm",
+                  "version" : "0.32"
+               }
+            },
+            "release_status" : "stable",
+            "resources" : {
+               "license" : [
+                  "http://dev.perl.org/licenses/"
+               ]
+            },
+            "version" : "0.32"
+         },
+         "name" : "Test::Exception",
+         "pathname" : "A/AD/ADIE/Test-Exception-0.32.tar.gz",
+         "provides" : {
+            "Test::Exception" : {
+               "file" : "lib/Test/Exception.pm",
+               "version" : "0.32"
+            }
+         },
+         "target" : "Test::Exception",
+         "version" : "0.32"
+      }
+   },
+   "version" : "0.9"
+}
