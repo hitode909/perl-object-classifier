@@ -20,6 +20,8 @@ sub accept : Tests {
     ok $oc->accept(0.2);
     ok ! $oc->accept('a');
     ok ! $oc->accept(undef);
+    ok ! $oc->accept({});
+    ok ! $oc->accept([]);
 }
 
 sub rate : Tests {
