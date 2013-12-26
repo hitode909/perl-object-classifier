@@ -16,9 +16,7 @@ sub accept {
     my $accepted = ref $object eq 'HASH';
     if ($accepted) {
         for my $key (keys %$object) {
-            require ObjectClassifier;
-            $self->{members}->{$key} //= ObjectClassifier->new;
-            $self->{members}->{$key}->add($object->{$key});
+            $self->member($key)->add($object->{$key});
         }
     }
     $accepted;
@@ -37,7 +35,8 @@ sub members {
 
 sub member {
     my ($self, $key) = @_;
-    $self->members->{$key};
+    require ObjectClassifier;
+    $self->members->{$key} //= ObjectClassifier->new;
 }
 
 1;
