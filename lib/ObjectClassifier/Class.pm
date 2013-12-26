@@ -18,7 +18,7 @@ sub accept {
 
 sub class_name {
     my ($self) = @_;
-    (split /::/, (ref $self))[-1];
+    "@{[ (split /::/, (ref $self))[-1] ]}(@{[ int($self->rate*100) ]}%)";
 }
 
 sub add {

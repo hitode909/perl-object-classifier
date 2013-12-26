@@ -21,8 +21,3 @@ sub accept : Tests {
     ok $c->accept(undef);
     ok ! $c->accept('a');
 }
-
-sub class_name : Tests {
-    my $c = ObjectClassifier::Class::Bool->new;
-    is $c->class_name, 'Bool';
-}

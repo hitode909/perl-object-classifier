@@ -23,7 +23,7 @@ sub member {
 
 sub class_name {
     my ($self) = @_;
-    "Array<@{[ $self->member->classify->class_name ] }>";
+    "@{[ $self->SUPER::class_name ]}<@{[ $self->member->classify->class_name ] }>";
 }
 
 

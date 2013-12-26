@@ -31,8 +31,6 @@ sub member : Tests {
 
 sub class_name : Tests {
     my $c = ObjectClassifier::Class::Array->new;
-    is $c->class_name, 'Array<Unknown>';
-
     $c->add([[1]]);
-    is $c->class_name, 'Array<Array<Number>>';
+    is $c->class_name, 'Array(100%)<Array(100%)<Number(100%)>>';
 }

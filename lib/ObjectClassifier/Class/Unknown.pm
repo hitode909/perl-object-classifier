@@ -9,4 +9,8 @@ sub accept {
     0;
 }
 
+sub class_name {
+    'Unknown';
+}
+
 1;

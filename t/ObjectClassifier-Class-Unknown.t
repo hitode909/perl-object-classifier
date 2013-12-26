@@ -18,6 +18,7 @@ sub accept : Tests {
     ok ! $oc->accept('a');
     ok ! $oc->accept(undef);
 }
+
 sub class_name : Tests {
     my $c = ObjectClassifier::Class::Unknown->new;
     is $c->class_name, 'Unknown';

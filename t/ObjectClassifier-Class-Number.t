@@ -35,5 +35,8 @@ sub rate : Tests {
 
 sub class_name : Tests {
     my $c = ObjectClassifier::Class::Number->new;
-    is $c->class_name, 'Number';
+    $c->add(1);
+    is $c->class_name, 'Number(100%)';
+    $c->add('a');
+    is $c->class_name, 'Number(50%)';
 }
