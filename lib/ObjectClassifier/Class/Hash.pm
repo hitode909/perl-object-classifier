@@ -55,4 +55,16 @@ sub class_name {
     }
 }
 
+sub dump {
+    my ($self) = @_;
+
+    if (@{$self->keys}) {
+        + {
+            (map { ("@{[ $_ ]}(@{[ int($self->rate_of_member($_)*100) ]}%)" => "@{[ $self->member($_)->classify->class_name ]}") } @{$self->keys})
+        };
+    } else {
+        {};
+    }
+}
+
 1;

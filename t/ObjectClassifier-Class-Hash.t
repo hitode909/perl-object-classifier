@@ -53,3 +53,12 @@ sub class_name : Tests {
     $c->add({c => {}});
     is $c->class_name, 'Hash(100%)<a(25%): Number(100%), b(25%): String(100%), c(25%): Hash(100%)>';
 }
+
+sub dump : Tests {
+    my $c = ObjectClassifier::Class::Hash->new;
+    is_deeply $c->dump, {};
+
+    $c->add({a => 1});
+
+    is_deeply $c->dump, {'a(100%)' => 'Number(100%)'};
+}

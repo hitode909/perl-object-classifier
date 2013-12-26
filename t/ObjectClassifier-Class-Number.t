@@ -40,3 +40,11 @@ sub class_name : Tests {
     $c->add('a');
     is $c->class_name, 'Number(50%)';
 }
+
+sub dump : Tests {
+    my $c = ObjectClassifier::Class::Number->new;
+    $c->add(1);
+    is $c->dump, 'Number(100%)';
+    $c->add('a');
+    is $c->dump, 'Number(50%)';
+}

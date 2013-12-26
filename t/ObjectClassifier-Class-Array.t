@@ -38,3 +38,12 @@ sub class_name : Tests {
     $c2->add([[1]]);
     is $c2->class_name, 'Array(100%)<Array(100%)<Number(100%)>>';
 }
+
+sub dump : Tests {
+    my $c1 = ObjectClassifier::Class::Array->new;
+    is_deeply $c1->dump, [];
+
+    $c1->add([1]);
+
+    is_deeply $c1->dump, ['Number(100%)'];
+}

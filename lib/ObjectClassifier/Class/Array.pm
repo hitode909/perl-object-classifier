@@ -27,7 +27,18 @@ sub class_name {
         "@{[ $self->SUPER::class_name ]}<@{[ $self->member->classify->class_name ] }>";
     } else {
         $self->SUPER::class_name;
-    }}
+    }
+}
+
+sub dump {
+    my ($self) = @_;
+
+    if ($self->member->length) {
+        [ $self->member->classify->dump ];
+    } else {
+        [];
+    }
+}
 
 
 1;

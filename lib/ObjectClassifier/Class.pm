@@ -21,6 +21,11 @@ sub class_name {
     "@{[ (split /::/, (ref $self))[-1] ]}(@{[ int($self->rate*100) ]}%)";
 }
 
+sub dump {
+    my ($self) = @_;
+    $self->class_name;
+}
+
 sub add {
     my ($self, $object) = @_;
     $self->{length}++;
