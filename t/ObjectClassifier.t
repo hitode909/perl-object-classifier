@@ -21,6 +21,7 @@ sub add : Tests {
 
 sub classify : Tests {
     my $oc = ObjectClassifier->new;
+    isa_ok $oc->classify, 'ObjectClassifier::Class::Unknown';
     $oc->add(3);
 
     isa_ok $oc->classify, 'ObjectClassifier::Class::Number';

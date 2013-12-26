@@ -8,6 +8,7 @@ use ObjectClassifier::Class::Bool;
 use ObjectClassifier::Class::Hash;
 use ObjectClassifier::Class::Number;
 use ObjectClassifier::Class::String;
+use ObjectClassifier::Class::Unknown;
 
 sub new {
     my ($class) = @_;
@@ -38,6 +39,7 @@ sub length {
 
 sub classify {
     my ($self) = @_;
+    return ObjectClassifier::Class::Unknown->new unless $self->length;
     [ sort { $b->rate <=> $a->rate } @{$self->{classes}} ]->[0];
 }
 
