@@ -61,4 +61,11 @@ sub dump : Tests {
     $c->add({a => 1});
 
     is_deeply $c->dump, {'a(100%)' => 'Number(100%)'};
+
+    $c->add({b => [2]});
+
+    is_deeply $c->dump, {
+        'a(50%)' => 'Number(100%)',
+        'b(50%)' => ['Number(100%)'],
+    };
 }
