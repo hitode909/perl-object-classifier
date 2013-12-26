@@ -8,23 +8,23 @@ sub _require : Test(startup => 1) {
 }
 
 sub _new : Tests {
-    my $oc = ObjectClassifier::Class::Array->new;
-    isa_ok $oc, 'ObjectClassifier::Class';
-    isa_ok $oc, 'ObjectClassifier::Class::Array';
+    my $c = ObjectClassifier::Class::Array->new;
+    isa_ok $c, 'ObjectClassifier::Class';
+    isa_ok $c, 'ObjectClassifier::Class::Array';
 }
 
 sub accept : Tests {
-    my $oc = ObjectClassifier::Class::Array->new;
-    ok $oc->accept([]);
-    ok $oc->accept([1]);
-    ok ! $oc->accept('a');
+    my $c = ObjectClassifier::Class::Array->new;
+    ok $c->accept([]);
+    ok $c->accept([1]);
+    ok ! $c->accept('a');
 }
 
 sub member : Tests {
-    my $oc = ObjectClassifier::Class::Array->new;
-    ok $oc->accept([1]);
-    isa_ok $oc->member, 'ObjectClassifier';
-    isa_ok $oc->member->classify, ObjectClassifier::Class::Number;
-    ok $oc->accept(['a', 'b']);
-    isa_ok $oc->member->classify, ObjectClassifier::Class::String;
+    my $c = ObjectClassifier::Class::Array->new;
+    ok $c->accept([1]);
+    isa_ok $c->member, 'ObjectClassifier';
+    isa_ok $c->member->classify, ObjectClassifier::Class::Number;
+    ok $c->accept(['a', 'b']);
+    isa_ok $c->member->classify, ObjectClassifier::Class::String;
 }

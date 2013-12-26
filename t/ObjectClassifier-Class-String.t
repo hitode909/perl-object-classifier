@@ -8,16 +8,16 @@ sub _require : Test(startup => 1) {
 }
 
 sub _new : Tests {
-    my $oc = ObjectClassifier::Class::String->new;
-    isa_ok $oc, 'ObjectClassifier::Class';
-    isa_ok $oc, 'ObjectClassifier::Class::String';
+    my $c = ObjectClassifier::Class::String->new;
+    isa_ok $c, 'ObjectClassifier::Class';
+    isa_ok $c, 'ObjectClassifier::Class::String';
 }
 
 sub accept : Tests {
-    my $oc = ObjectClassifier::Class::String->new;
-    ok $oc->accept('a');
-    ok $oc->accept('');
-    ok $oc->accept(1);
-    ok ! $oc->accept(undef);
-    ok ! $oc->accept({});
+    my $c = ObjectClassifier::Class::String->new;
+    ok $c->accept('a');
+    ok $c->accept('');
+    ok $c->accept(1);
+    ok ! $c->accept(undef);
+    ok ! $c->accept({});
 }

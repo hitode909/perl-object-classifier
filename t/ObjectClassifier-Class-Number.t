@@ -8,27 +8,27 @@ sub _require : Test(startup => 1) {
 }
 
 sub _new : Tests {
-    my $oc = ObjectClassifier::Class::Number->new;
-    isa_ok $oc, 'ObjectClassifier::Class';
-    isa_ok $oc, 'ObjectClassifier::Class::Number';
+    my $c = ObjectClassifier::Class::Number->new;
+    isa_ok $c, 'ObjectClassifier::Class';
+    isa_ok $c, 'ObjectClassifier::Class::Number';
 }
 
 sub accept : Tests {
-    my $oc = ObjectClassifier::Class::Number->new;
-    ok $oc->accept(3);
-    ok $oc->accept(0);
-    ok $oc->accept(0.2);
-    ok ! $oc->accept('a');
-    ok ! $oc->accept(undef);
-    ok ! $oc->accept({});
-    ok ! $oc->accept([]);
+    my $c = ObjectClassifier::Class::Number->new;
+    ok $c->accept(3);
+    ok $c->accept(0);
+    ok $c->accept(0.2);
+    ok ! $c->accept('a');
+    ok ! $c->accept(undef);
+    ok ! $c->accept({});
+    ok ! $c->accept([]);
 }
 
 sub rate : Tests {
-    my $oc = ObjectClassifier::Class::Number->new;
-    is $oc->rate, 0;
-    $oc->add(3);
-    is $oc->rate, 1;
-    $oc->add('a');
-    is $oc->rate, 0.5;
+    my $c = ObjectClassifier::Class::Number->new;
+    is $c->rate, 0;
+    $c->add(3);
+    is $c->rate, 1;
+    $c->add('a');
+    is $c->rate, 0.5;
 }
