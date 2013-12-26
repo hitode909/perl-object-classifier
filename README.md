@@ -1,0 +1,20 @@
+# perl-object-classifier
+
+## Example
+
+```perl
+my $oc = ObjectClassifier->new;
+
+$oc->add({
+    name => 'Alice',
+    age => 20,
+});
+$oc->add({
+    name => 'Bob',
+    age => 21,
+    hobbies => ['tennis', 'soccer'],
+});
+
+print $oc->classify->class_name;
+# => Hash(100%)<age(100%): Number(100%), hobbies(50%): Array(100%)<String(100%)>, name(100%): String(100%)>
+```
