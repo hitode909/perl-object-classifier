@@ -22,7 +22,7 @@ sub accept : Tests {
 
 sub member : Tests {
     my $c = ObjectClassifier::Class::Array->new;
-    ok $c->add([1]);
+    ok $c->add([2]);
     isa_ok $c->member, 'ObjectClassifier';
     isa_ok $c->member->classify, ObjectClassifier::Class::Number;
     ok $c->add(['a', 'b']);
@@ -35,7 +35,7 @@ sub class_name : Tests {
     is $c1->class_name, 'Array(100%)';
 
     my $c2 = ObjectClassifier::Class::Array->new;
-    $c2->add([[1]]);
+    $c2->add([[2]]);
     is $c2->class_name, 'Array(100%)<Array(100%)<Number(100%)>>';
 }
 
@@ -43,7 +43,7 @@ sub dump : Tests {
     my $c1 = ObjectClassifier::Class::Array->new;
     is_deeply $c1->dump, [];
 
-    $c1->add([1]);
+    $c1->add([2]);
 
     is_deeply $c1->dump, ['Number(100%)'];
 }

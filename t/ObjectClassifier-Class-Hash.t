@@ -44,7 +44,7 @@ sub class_name : Tests {
     $c->add({});
     is $c->class_name, 'Hash(100%)';
 
-    $c->add({a => 1});
+    $c->add({a => 10});
     is $c->class_name, 'Hash(100%)<a(50%): Number(100%)>';
 
     $c->add({b => 'b'});
@@ -58,11 +58,11 @@ sub dump : Tests {
     my $c = ObjectClassifier::Class::Hash->new;
     is_deeply $c->dump, {};
 
-    $c->add({a => 1});
+    $c->add({a => 10});
 
     is_deeply $c->dump, {'a(100%)' => 'Number(100%)'};
 
-    $c->add({b => [2]});
+    $c->add({b => [20]});
 
     is_deeply $c->dump, {
         'a(50%)' => 'Number(100%)',
