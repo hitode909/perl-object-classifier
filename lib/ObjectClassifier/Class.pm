@@ -16,6 +16,11 @@ sub accept {
     die;
 }
 
+sub class_name {
+    my ($self) = @_;
+    (split /::/, (ref $self))[-1];
+}
+
 sub add {
     my ($self, $object) = @_;
     $self->{length}++;

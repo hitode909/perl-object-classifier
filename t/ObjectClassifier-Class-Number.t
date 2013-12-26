@@ -32,3 +32,8 @@ sub rate : Tests {
     $c->add('a');
     is $c->rate, 0.5;
 }
+
+sub class_name : Tests {
+    my $c = ObjectClassifier::Class::Number->new;
+    is $c->class_name, 'Number';
+}
