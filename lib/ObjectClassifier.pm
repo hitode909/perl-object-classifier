@@ -17,9 +17,9 @@ sub new {
         classes => [
             ObjectClassifier::Class::Hash->new,
             ObjectClassifier::Class::Array->new,
+            ObjectClassifier::Class::Bool->new,
             ObjectClassifier::Class::Number->new,
             ObjectClassifier::Class::String->new,
-            ObjectClassifier::Class::Bool->new,
         ],
     }, $class;
 }

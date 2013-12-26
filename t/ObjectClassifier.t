@@ -60,3 +60,10 @@ sub classify_nested_hash : Tests {
     isa_ok $oc->classify->member('a')->classify->member('b')->classify, 'ObjectClassifier::Class::String';
     is $oc->classify->member('a')->classify->member('b')->classify->rate, 1;
 }
+
+sub classify_bool : Tests {
+    my $oc = ObjectClassifier->new;
+    $oc->add(1);
+    $oc->add(0);
+    isa_ok $oc->classify, 'ObjectClassifier::Class::Bool';
+}
