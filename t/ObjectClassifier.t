@@ -61,6 +61,21 @@ sub classify_nested_hash : Tests {
     is $oc->classify->member('a')->classify->member('b')->classify->rate, 1;
 }
 
+sub classify_string : Tests {
+    my $oc = ObjectClassifier->new;
+    $oc->add('a');
+    $oc->add('b');
+    isa_ok $oc->classify, 'ObjectClassifier::Class::String';
+}
+
+sub classify_nullable_string : Tests {
+    my $oc = ObjectClassifier->new;
+    $oc->add('a');
+    $oc->add('b');
+    $oc->add(undef);
+    isa_ok $oc->classify, 'ObjectClassifier::Class::NullableString';
+}
+
 sub classify_bool : Tests {
     my $oc = ObjectClassifier->new;
     $oc->add(1);

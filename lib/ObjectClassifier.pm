@@ -8,6 +8,7 @@ use ObjectClassifier::Class::Bool;
 use ObjectClassifier::Class::Hash;
 use ObjectClassifier::Class::Number;
 use ObjectClassifier::Class::String;
+use ObjectClassifier::Class::NullableString;
 use ObjectClassifier::Class::Unknown;
 
 sub new {
@@ -20,6 +21,7 @@ sub new {
             ObjectClassifier::Class::Bool->new,
             ObjectClassifier::Class::Number->new,
             ObjectClassifier::Class::String->new,
+            ObjectClassifier::Class::NullableString->new,
         ],
     }, $class;
 }
