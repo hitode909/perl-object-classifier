@@ -33,16 +33,30 @@ sub classify_number_string : Tests {
     is $oc->classify->rate, 1;
 }
 
-sub classify_array : Tests {
+sub classify_nested_array : Tests {
     my $oc = ObjectClassifier->new;
-    isa_ok $oc->classify, 'ObjectClassifier::Class::Unknown';
-    $oc->add(3);
+    $oc->add([[1], [2]]);
 
-    isa_ok $oc->classify, 'ObjectClassifier::Class::Number';
+    isa_ok $oc->classify, 'ObjectClassifier::Class::Array';
     is $oc->classify->rate, 1;
 
-    $oc->add('a');
+    isa_ok $oc->classify->member->classify, 'ObjectClassifier::Class::Array';
+    is $oc->classify->member->classify->rate, 1;
 
-    isa_ok $oc->classify, 'ObjectClassifier::Class::String';
+    isa_ok $oc->classify->member->classify->member->classify, 'ObjectClassifier::Class::Number';
+    is $oc->classify->member->classify->member->classify->rate, 1;
+}
+
+sub classify_nested_hash : Tests {
+    my $oc = ObjectClassifier->new;
+    $oc->add({a => {b => 'c'}});
+
+    isa_ok $oc->classify, 'ObjectClassifier::Class::Hash';
     is $oc->classify->rate, 1;
+
+    isa_ok $oc->classify->member('a')->classify, 'ObjectClassifier::Class::Hash';
+    is $oc->classify->member('a')->classify->rate, 1;
+
+    isa_ok $oc->classify->member('a')->classify->member('b')->classify, 'ObjectClassifier::Class::String';
+    is $oc->classify->member('a')->classify->member('b')->classify->rate, 1;
 }
