@@ -6,7 +6,19 @@ use parent qw(ObjectClassifier::Class);
 
 sub accept {
     my ($self, $object) = @_;
-    ref $object eq 'ARRAY';
+    my $accepted = ref $object eq 'ARRAY';
+    if ($accepted) {
+        for my $value (@$object) {
+            $self->member->add($value);
+        }
+    }
+    $accepted
+}
+
+sub member {
+    my ($self) = @_;
+    require ObjectClassifier;
+    $self->{member} //= ObjectClassifier->new;
 }
 
 1;

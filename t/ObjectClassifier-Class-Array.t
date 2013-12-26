@@ -19,3 +19,12 @@ sub accept : Tests {
     ok $oc->accept([1]);
     ok ! $oc->accept('a');
 }
+
+sub member : Tests {
+    my $oc = ObjectClassifier::Class::Array->new;
+    ok $oc->accept([1]);
+    isa_ok $oc->member, 'ObjectClassifier';
+    isa_ok $oc->member->classify, ObjectClassifier::Class::Number;
+    ok $oc->accept(['a', 'b']);
+    isa_ok $oc->member->classify, ObjectClassifier::Class::String;
+}
