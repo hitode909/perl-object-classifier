@@ -24,9 +24,9 @@ sub class_name {
 sub add {
     my ($self, $object) = @_;
     $self->{length}++;
-    if ($self->accept($object)) {
-        $self->{accepted}++;
-    }
+    my $accepted = $self->accept($object);
+    $self->{accepted}++ if $accepted;
+    $accepted;
 }
 
 sub rate {
