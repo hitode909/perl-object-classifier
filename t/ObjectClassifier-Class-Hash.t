@@ -19,3 +19,13 @@ sub accept : Tests {
     ok $oc->accept({a => 'b'});
     ok ! $oc->accept('a');
 }
+
+sub members : Tests {
+    my $oc = ObjectClassifier::Class::Hash->new;
+    ok $oc->accept({});
+    is_deeply $oc->keys, [];
+    ok $oc->accept({a => 'b'});
+    is_deeply $oc->keys, ['a'];
+    isa_ok $oc->member('a'), 'ObjectClassifier';
+    isa_ok $oc->member('a')->classify, ObjectClassifier::Class::String;
+}
