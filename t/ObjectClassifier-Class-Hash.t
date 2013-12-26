@@ -22,9 +22,9 @@ sub accept : Tests {
 
 sub members : Tests {
     my $c = ObjectClassifier::Class::Hash->new;
-    ok $c->accept({});
+    ok $c->add({});
     is_deeply $c->keys, [];
-    ok $c->accept({a => 'b'});
+    ok $c->add({a => 'b'});
     is_deeply $c->keys, ['a'];
     isa_ok $c->member('a'), 'ObjectClassifier';
     isa_ok $c->member('a')->classify, ObjectClassifier::Class::String;
