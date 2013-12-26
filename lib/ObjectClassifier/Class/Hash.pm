@@ -24,7 +24,7 @@ sub accept {
 
 sub keys {
     my ($self) = @_;
-    [ keys %{$self->members} ];
+    [ sort keys %{$self->members} ];
 }
 
 sub members {
@@ -43,6 +43,16 @@ sub rate_of_member {
     my ($self, $key) = @_;
     return 0 unless $self->length;
     $self->member($key)->length / $self->length;
+}
+
+sub class_name {
+    my ($self) = @_;
+    my $class_name = $self->SUPER::class_name;
+    return  $self->SUPER::class_name unless @{$self->keys};
+    if (@{$self->keys}) {
+        $class_name .= '<' . join(', ', map { $_ . ': ' . $self->member($_)->classify->class_name } @{$self->keys}) . '>';
+    }
+    $class_name;
 }
 
 1;

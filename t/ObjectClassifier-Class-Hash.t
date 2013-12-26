@@ -38,3 +38,17 @@ sub rate_of_member : Tests {
     is $c->rate_of_member('b'), 0.5;
     is $c->rate_of_member('c'), 0;
 }
+
+sub class_name : Tests {
+    my $c = ObjectClassifier::Class::Hash->new;
+    is $c->class_name, 'Hash';
+
+    $c->add({a => 1});
+    is $c->class_name, 'Hash<a: Number>';
+
+    $c->add({b => 'b'});
+    is $c->class_name, 'Hash<a: Number, b: String>';
+
+    $c->add({c => {}});
+    is $c->class_name, 'Hash<a: Number, b: String, c: Hash>';
+}
