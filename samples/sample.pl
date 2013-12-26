@@ -22,10 +22,10 @@ print $oc->classify->class_name . "\n";
 # => Hash(100%)<age(100%): Number(100%), hobbies(50%): Array(100%)<String(100%)>, name(100%): String(100%)>
 
 print Dumper $oc->classify->dump;
-# $VAR1 = {
-#           'name(100%)' => 'String(100%)',
-#           'hobbies(50%)' => [
-#                               'String(100%)'
-#                             ],
-#           'age(100%)' => 'Number(100%)'
-#         };
+#  => {
+#      'name(100%)' => 'String(100%)',
+#      'hobbies(50%)' => [
+#                          'String(100%)'
+#                        ],
+#      'age(100%)' => 'Number(100%)'
+#     };
