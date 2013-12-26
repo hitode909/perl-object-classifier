@@ -22,10 +22,10 @@ sub accept : Tests {
 
 sub member : Tests {
     my $c = ObjectClassifier::Class::Array->new;
-    ok $c->accept([1]);
+    ok $c->add([1]);
     isa_ok $c->member, 'ObjectClassifier';
     isa_ok $c->member->classify, ObjectClassifier::Class::Number;
-    ok $c->accept(['a', 'b']);
+    ok $c->add(['a', 'b']);
     isa_ok $c->member->classify, ObjectClassifier::Class::String;
 }
 
