@@ -6,7 +6,8 @@ use parent qw(ObjectClassifier::Class);
 
 sub accept {
     my ($self, $object) = @_;
-    $object ~~ ['1', '0', '', undef];
+    return 1 unless defined $object;
+    $object ~~ ['1', '0', ''];
 }
 
 1;
