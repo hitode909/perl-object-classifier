@@ -28,3 +28,12 @@ print Dumper $oc->classify->dump;
 ```
 
 This means that all objects have name and age, 50% of obects have hobbies.
+
+## Supported classes
+
+- Array ([])
+- Hash ({})
+- Bool (1 | 0 | '' | undef)
+- Number (looks_like_number)
+- String (Not blessed value)
+- NullableString (String | undef)
