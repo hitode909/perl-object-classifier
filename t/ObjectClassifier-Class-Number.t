@@ -18,6 +18,7 @@ sub accept : Tests {
     ok $c->accept(3);
     ok $c->accept(0);
     ok $c->accept(0.2);
+    ok ! $c->accept('2a');
     ok ! $c->accept('a');
     ok ! $c->accept(undef);
     ok ! $c->accept({});
