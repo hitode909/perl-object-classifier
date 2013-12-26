@@ -21,4 +21,10 @@ sub member {
     $self->{member} //= ObjectClassifier->new;
 }
 
+sub class_name {
+    my ($self) = @_;
+    "Array<@{[ $self->member->classify->class_name ] }>";
+}
+
+
 1;

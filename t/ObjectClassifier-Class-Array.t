@@ -28,3 +28,11 @@ sub member : Tests {
     ok $c->accept(['a', 'b']);
     isa_ok $c->member->classify, ObjectClassifier::Class::String;
 }
+
+sub class_name : Tests {
+    my $c = ObjectClassifier::Class::Array->new;
+    is $c->class_name, 'Array<Unknown>';
+
+    $c->add([[1]]);
+    is $c->class_name, 'Array<Array<Number>>';
+}
