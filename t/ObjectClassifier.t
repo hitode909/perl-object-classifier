@@ -19,7 +19,21 @@ sub add : Tests {
     is $oc->length, 1;
 }
 
-sub classify : Tests {
+sub classify_number_string : Tests {
+    my $oc = ObjectClassifier->new;
+    isa_ok $oc->classify, 'ObjectClassifier::Class::Unknown';
+    $oc->add(3);
+
+    isa_ok $oc->classify, 'ObjectClassifier::Class::Number';
+    is $oc->classify->rate, 1;
+
+    $oc->add('a');
+
+    isa_ok $oc->classify, 'ObjectClassifier::Class::String';
+    is $oc->classify->rate, 1;
+}
+
+sub classify_array : Tests {
     my $oc = ObjectClassifier->new;
     isa_ok $oc->classify, 'ObjectClassifier::Class::Unknown';
     $oc->add(3);

@@ -29,3 +29,12 @@ sub members : Tests {
     isa_ok $oc->member('a'), 'ObjectClassifier';
     isa_ok $oc->member('a')->classify, ObjectClassifier::Class::String;
 }
+
+sub rate_of_member : Tests {
+    my $oc = ObjectClassifier::Class::Hash->new;
+    $oc->add({a => 1});
+    $oc->add({a => 1, b => 2});
+    is $oc->rate_of_member('a'), 1;
+    is $oc->rate_of_member('b'), 0.5;
+    is $oc->rate_of_member('c'), 0;
+}

@@ -39,4 +39,10 @@ sub member {
     $self->members->{$key} //= ObjectClassifier->new;
 }
 
+sub rate_of_member {
+    my ($self, $key) = @_;
+    return 0 unless $self->length;
+    $self->member($key)->length / $self->length;
+}
+
 1;

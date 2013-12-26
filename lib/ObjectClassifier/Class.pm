@@ -7,7 +7,7 @@ sub new {
     my ($class) = @_;
     bless {
         accepted => 0,
-        total => 0,
+        length => 0,
     }, $class;
 }
 
@@ -18,7 +18,7 @@ sub accept {
 
 sub add {
     my ($self, $object) = @_;
-    $self->{total}++;
+    $self->{length}++;
     if ($self->accept($object)) {
         $self->{accepted}++;
     }
@@ -27,8 +27,13 @@ sub add {
 sub rate {
     my ($self) = @_;
 
-    return 0 unless $self->{total};
-    $self->{accepted} / $self->{total};
+    return 0 unless $self->length;
+    $self->{accepted} / $self->length;
+}
+
+sub length {
+    my ($self) = @_;
+    $self->{length};
 }
 
 1;
