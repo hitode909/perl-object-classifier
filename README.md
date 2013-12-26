@@ -1,5 +1,7 @@
 # perl-object-classifier
 
+A class to find the common structures of objects
+
 ## Example
 
 ```perl
@@ -15,6 +17,14 @@ $oc->add({
     hobbies => ['tennis', 'soccer'],
 });
 
-print $oc->classify->class_name;
-# => Hash(100%)<age(100%): Number(100%), hobbies(50%): Array(100%)<String(100%)>, name(100%): String(100%)>
+print Dumper $oc->classify->dump;
+#  => {
+#      'name(100%)' => 'String(100%)',
+#      'hobbies(50%)' => [
+#                          'String(100%)'
+#                        ],
+#      'age(100%)' => 'Number(100%)'
+#     };
 ```
+
+This means that all objects have name and age, 50% of obects have hobbies.
