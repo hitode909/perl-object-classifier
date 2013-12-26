@@ -3,26 +3,42 @@ use strict;
 use warnings;
 use v5.14;
 
+use ObjectClassifier::Class::Array;
+use ObjectClassifier::Class::Bool;
+use ObjectClassifier::Class::Hash;
+use ObjectClassifier::Class::Number;
+use ObjectClassifier::Class::String;
+
 sub new {
     my ($class) = @_;
     bless {
-        objects => [],
+        length => 0,
+        classes => [
+            ObjectClassifier::Class::Hash->new,
+            ObjectClassifier::Class::Array->new,
+            ObjectClassifier::Class::Number->new,
+            ObjectClassifier::Class::String->new,
+            ObjectClassifier::Class::Bool->new,
+        ],
     }, $class;
 }
 
 sub add {
     my ($self, $object) = @_;
-    push $self->{objects}, $object;
+    for my $class (@{$self->{classes}}) {
+        $class->add($object);
+    }
+    $self->{length}++;
 }
 
 sub length {
     my ($self) = @_;
-
-    scalar @{$self->{objects}};
+    $self->{length};
 }
 
 sub classify {
-    'number';
+    my ($self) = @_;
+    [ sort { $b->rate <=> $a->rate } @{$self->{classes}} ]->[0];
 }
 
 1;

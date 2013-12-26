@@ -22,5 +22,12 @@ sub add : Tests {
 sub classify : Tests {
     my $oc = ObjectClassifier->new;
     $oc->add(3);
-    is $oc->classify, 'number';
+
+    isa_ok $oc->classify, 'ObjectClassifier::Class::Number';
+    is $oc->classify->rate, 1;
+
+    $oc->add('a');
+
+    isa_ok $oc->classify, 'ObjectClassifier::Class::String';
+    is $oc->classify->rate, 1;
 }
