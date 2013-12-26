@@ -41,13 +41,15 @@ sub rate_of_member : Tests {
 
 sub class_name : Tests {
     my $c = ObjectClassifier::Class::Hash->new;
+    $c->add({});
+    is $c->class_name, 'Hash(100%)';
 
     $c->add({a => 1});
-    is $c->class_name, 'Hash(100%)<a: Number(100%)>';
+    is $c->class_name, 'Hash(100%)<a(50%): Number(100%)>';
 
     $c->add({b => 'b'});
-    is $c->class_name, 'Hash(100%)<a: Number(100%), b: String(100%)>';
+    is $c->class_name, 'Hash(100%)<a(33%): Number(100%), b(33%): String(100%)>';
 
     $c->add({c => {}});
-    is $c->class_name, 'Hash(100%)<a: Number(100%), b: String(100%), c: Hash(100%)>';
+    is $c->class_name, 'Hash(100%)<a(25%): Number(100%), b(25%): String(100%), c(25%): Hash(100%)>';
 }

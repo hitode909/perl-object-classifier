@@ -23,8 +23,11 @@ sub member {
 
 sub class_name {
     my ($self) = @_;
-    "@{[ $self->SUPER::class_name ]}<@{[ $self->member->classify->class_name ] }>";
-}
+    if ($self->member->length) {
+        "@{[ $self->SUPER::class_name ]}<@{[ $self->member->classify->class_name ] }>";
+    } else {
+        $self->SUPER::class_name;
+    }}
 
 
 1;

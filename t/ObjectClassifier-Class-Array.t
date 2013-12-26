@@ -30,7 +30,11 @@ sub member : Tests {
 }
 
 sub class_name : Tests {
-    my $c = ObjectClassifier::Class::Array->new;
-    $c->add([[1]]);
-    is $c->class_name, 'Array(100%)<Array(100%)<Number(100%)>>';
+    my $c1 = ObjectClassifier::Class::Array->new;
+    $c1->add([]);
+    is $c1->class_name, 'Array(100%)';
+
+    my $c2 = ObjectClassifier::Class::Array->new;
+    $c2->add([[1]]);
+    is $c2->class_name, 'Array(100%)<Array(100%)<Number(100%)>>';
 }

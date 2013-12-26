@@ -47,12 +47,12 @@ sub rate_of_member {
 
 sub class_name {
     my ($self) = @_;
-    my $class_name = $self->SUPER::class_name;
-    return  $self->SUPER::class_name unless @{$self->keys};
     if (@{$self->keys}) {
-        $class_name .= '<' . join(', ', map { $_ . ': ' . $self->member($_)->classify->class_name } @{$self->keys}) . '>';
+        my $members = join ', ', map { "@{[ $_ ]}(@{[ int($self->rate_of_member($_)*100) ]}%): @{[ $self->member($_)->classify->class_name ]}" } @{$self->keys};
+        "@{[ $self->SUPER::class_name ]}<@{[ $members ]}>";
+    } else {
+        $self->SUPER::class_name;
     }
-    $class_name;
 }
 
 1;
